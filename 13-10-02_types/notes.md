@@ -128,13 +128,13 @@ A string is a sequence of characters with a definite length used to represent
 text. Go strings are made of individual bytes, usually one for each character.
 
 String literals can be created using double quotes `"Hello World"` or back
-ticks `\`Hello World\``. The difference is that double quoted strings cannot
+ticks \`Hello World\`. The difference is that double quoted strings cannot
 contain newlines and they allow special escape sequences. For example, `\n`
 gets replaced with a newline and `\t` gets replaced with a tab character.
 
 Several common operations on strings include finding the length of a string:
 `len("Hello World")`, accessing an individual character in the string: `"Hello
-world[1]`, and concatenating (combining) two strings together: `"Hello " +
+world"[1]`, and concatenating (combining) two strings together: `"Hello " +
 "World"`. Let's modify the program we created earlier to test these out:
 
 ```go
