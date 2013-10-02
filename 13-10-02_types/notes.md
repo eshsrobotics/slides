@@ -187,26 +187,9 @@ Running this program should give you
     true
     false
 
-We usually use truth talbes to define how these oeprators work.
+We usually use truth tables to define how these oeprators work.
 
-| Expression     | Value |
-| -------------- | ----- |
-| true && true   | true  |
-| true && false  | false |
-| false && true  | false |
-| false && false | false |
-
-| Expression     | Value |
-| -------------- | ------|
-| true || true   | true  |
-| true || false  | true  |
-| false || true  | true  |
-| false || false | false |
-
-| Expression | Value |
-| ---------- | ----- |
-| !true      | false |
-| !false     | true  |
+![Truth Tables](truth_tables.png)
 
 ## Conclusion
 
