@@ -160,11 +160,7 @@ Few things to notice:
 A boolean value is a special 1 bit integer type used to represent true and
 false (or on and off). Three logical operators are used with boolean values.
 
-| Operator | Meaning |
-| -------- | ------- |
-| &&       | and     |
-| ||       | or      |
-| !        | not     |
+![Boolean Operators](boolean_operators.png)
 
 The following is an example program showing how they can be used:
 
