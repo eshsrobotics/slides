@@ -1,0 +1,149 @@
+\documentclass{beamer}
+
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\begin{document}
+
+\title[Structs]{Organizing Data with Structs}
+\author[Z. Latta]{Zach Latta}
+\date[November 2013]{November 20, 2013}
+
+\frame{\titlepage}
+
+\begin{frame}
+  \frametitle{Doge}
+  \includegraphics[height=3.0in]{doge}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Doge}
+  \includegraphics[height=3.0in]{doge_cage}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Doge}
+  \begin{columns}[c]
+    \column{1.5in}
+    \begin{itemize}
+      \item Such name
+      \item Many words
+      \item Wow
+    \end{itemize}
+
+    \column{1.5in}
+    \includegraphics[width=2.0in]{doge}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Doge}
+  \begin{columns}[c]
+    \column{1.5in}
+    \begin{itemize}
+      \item Two doge
+      \item Print name with words
+    \end{itemize}
+
+    \column{1.5in}
+    Expected output:
+    \begin{lstlisting}
+    John:
+    Such wow
+    Many word
+    
+    Jane:
+    So firetruck
+    Many coffee
+    \end{lstlisting}
+    
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{The Easy Way Out}
+
+  \begin{lstlisting}[language=go]
+  doge1Name := "John"
+  doge1Phrases := []string{"Such wow", "Many word"}
+
+  fmt.Println(doge1Name + ":")
+  for i := 0; i < len(doge1Phrases); i++ {
+    fmt.Println(doge1Phrases[i])
+  }
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Structs}
+
+  \begin{itemize}
+    \item Such encapsulate
+      \begin{itemize}
+        \item Bundle data together
+      \end{itemize}
+  \end{itemize}
+
+  \begin{framed}
+    \textbf{Doge}
+    
+    \begin{itemize}
+      \item Name
+      \item Phrases
+    \end{itemize}
+  \end{framed}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Structs}
+
+  \begin{lstlisting}[language=go]
+  type Doge struct {
+    Name string
+    Phrases []string
+  }
+
+  func main() {
+    doge := Doge{
+      Name: "John",
+      Phrases: []string{"Such wow", "Many word"},
+    }
+    fmt.Println(doge.Name)
+
+    for i := 0; i < len(doge.Phrases); i++ {
+      fmt.Println(doge.Phrases[i])
+    }
+  }
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Structs Scale}
+
+  \begin{itemize}
+    \item Structs = Doge++
+      \begin{itemize}
+        \item Many doge!
+      \end{itemize}
+    \item Structs make code \textbf{obvious}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercise}
+
+  \textbf{Create a Doge}
+
+  \begin{itemize}
+    \item Attributes
+      \begin{itemize}
+        \item Name
+        \item Phrases
+        \item Whether or note the doge is angry.
+      \end{itemize}
+    \item Make 5 doges and print out their attributes.
+  \end{itemize}
+\end{frame}
+
+\end{document}
